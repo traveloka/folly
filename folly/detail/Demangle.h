@@ -18,11 +18,14 @@
 
 #include <cstddef>
 
-#if __has_include(<demangle.h>)
-#define FOLLY_DETAIL_HAVE_DEMANGLE_H 1
-#else
+// FOLLY_DETAIL_HAVE_DEMANGLE_H = 1 Means it is running in Linux env
+// #if __has_include(<demangle.h>)
+// #define FOLLY_DETAIL_HAVE_DEMANGLE_H 1
+// #else
+// #define FOLLY_DETAIL_HAVE_DEMANGLE_H 0
+// #endif
+
 #define FOLLY_DETAIL_HAVE_DEMANGLE_H 0
-#endif
 
 namespace folly {
 namespace detail {
